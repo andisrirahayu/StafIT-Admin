@@ -1,0 +1,130 @@
+/* General CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9e8e8;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; /* Pastikan body memiliki tinggi minimal 100vh */
+    padding-top: 150px; /* Adjusted for submenu spacing */
+}
+
+/* Menu bar (submenu) */
+.menu-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8da9c4;
+    padding: 15px 30px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-bar a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-bar a:hover {
+    background-color: #34495E;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: #7c93a8;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-top: -82px; /* Menambahkan margin-top untuk memberi ruang di bawah submenu */
+    margin-bottom: 120px;
+}
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+}
+
+.title {
+    padding-left: 20px;
+    color: rgba(248, 245, 245, 0.959);
+    font-size: 24px;
+}
+
+/* Footer */
+footer {
+    background-color: #8da9c4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;  /* Posisi absolute untuk menempel di bawah */
+    bottom: 0;           /* Menempel di bagian bawah halaman */
+    left: 0;
+    right: 0;
+    margin-top: 20px; /* Jarak dari konten di atas */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .search-container {
+        width: 95%; /* Lebar hampir penuh di layar kecil */
+    }
+}
+
+/* Menata kotak untuk setiap laporan kejadian */
+.log-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.log-card {
+    width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #7c93a8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.log-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.log-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.log-card img {
+    margin-top: 10px;
+    max-width: 100%;
+}

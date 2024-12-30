@@ -1,0 +1,177 @@
+ /* General CSS */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9e8e8;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding-top: 150px; /* Adjusted for submenu spacing */
+}
+
+/* Menu bar (submenu) */
+.menu-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8da9c4;
+    padding: 15px 30px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-bar a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-bar a:hover {
+    background-color: #34495E;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: #7c93a8;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-top: -82px; /* Menambahkan margin-top untuk memberi ruang di bawah submenu */
+    margin-bottom: 120px;
+}
+
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+}
+
+.title {
+    padding-left: 20px;
+    color: rgba(248, 245, 245, 0.959);
+    font-size: 24px;
+}
+
+/* Footer */
+footer {
+    background-color: #8da9c4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* Container utama untuk log laporan kejadian */
+.log-laporan-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Mengurangi jarak antar item laporan */
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: -55px;
+}
+
+/* Setiap item laporan */
+.laporan-item {
+    background-color: #7c93a8;
+    padding: 10px; /* Mengurangi padding agar lebih rapat */
+    border-radius: 10px;
+    border: 1px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; /* Menyusun item dalam satu baris */
+    justify-content: flex-start; /* Mengatur elemen sejajar ke kiri */
+    align-items: center; /* Menjaga elemen tetap sejajar secara vertikal */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Style untuk container laporan yang membungkus seluruh konten */
+.laporan-content {
+    display: flex;                /* Mengatur item untuk sejajar ke samping */
+    align-items: center;          /* Menjaga semua elemen sejajar secara vertikal */
+    justify-content: flex-start;  /* Menjaga agar semua elemen berada di sebelah kiri */
+    gap: 15px;                    /* Mengatur jarak antar elemen supaya rata */
+    margin-bottom: 10px;          /* Memberikan jarak antar kotak laporan */
+    width: 100%;                  /* Memastikan kontainer mengambil seluruh lebar */
+}
+
+/* Mengatur tampilan tanggal dan waktu, lokasi, deskripsi */
+.laporan-date-time, .laporan-ruangan, .laporan-deskripsi {
+    font-size: 0.9rem;
+    color: #ffffff;
+    white-space: nowrap;  /* Agar teks tetap dalam satu baris */
+}
+
+/* Tombol status */
+.status-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto;  /* Ini untuk menggeser tombol ke sebelah kanan */
+}
+
+
+/* Status selesai */
+.status-btn.selesai {
+    background-color: #21f13c; 
+}
+
+.status-btn.selesai:hover {
+    background-color: #21f13dd7;
+}
+
+/* Status diatasi */
+.status-btn.diatasi {
+    background-color: #2196F3; /* Warna orange untuk diatasi */
+}
+
+.status-btn.diatasi:hover {
+    background-color: #1976D2;
+}
+
+/* Status masih ditangani */
+.status-btn.masih-ditangani {
+    background-color: #ff0000; /* Warna biru untuk masih ditangani */
+}
+
+.status-btn.masih-ditangani:hover {
+    background-color: #ff0000c9;
+}

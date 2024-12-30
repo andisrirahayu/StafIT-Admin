@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Menu Bar */
+.menu-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8da9c4;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.menu-bar a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-bar a:hover {
+    background-color: #34495E;
+    color: #fff;
+}
+
+/* Container utama untuk mengatur layout */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding-top: 60px; /* ruang untuk menu bar */
+    padding-bottom: 60px; /* ruang untuk footer */
+    width: 100%;
+}
+
+/* Header Profil */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  #7c93a8;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Profile Box */
+.profile-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e8e8;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+/* Description Box */
+.description-box {
+    display: flex;
+    align-items: center;
+    background-color: #7c93a8;
+    border-radius: 15px;
+    padding: 60px;
+    color: #fff;
+    max-width: 700px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Wrapper for Profile */
+.profile-container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align the content vertically */
+    padding: 20px;
+    border: 1px solid #ddd; /* Border around the profile box */
+    border-radius: 8px;
+    background-color: #f4f7fa; /* Background color for the profile box */
+    width: 80%; /* Set the width of the profile box */
+    max-width: 600px; /* Max width to ensure it doesn't stretch too far */
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9f1f8;
+    font-size: 40px;
+    color: #333;
+    margin-right: 20px; /* Space between picture and profile details */
+}
+
+/* Profile Details */
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the profile details */
+}
+
+/* Profile Info */
+.profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Hilangkan garis bawah pada elemen <a> */
+.buttons a {
+    text-decoration: none; /* Menghapus garis bawah dari <a> */
+    display: block; /* Agar <a> mengikuti gaya blok tombol */
+    color: inherit; /* Pastikan warna teks mengikuti tombol */
+}
+
+/* Styling untuk tombol di dalam <a> dan <form> */
+.buttons a button, .buttons button {
+    display: block; /* Pastikan tombol tampil sebagai blok */
+    margin: 5px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8da9c4;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%; /* Tombol memiliki lebar penuh */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran */
+    white-space: nowrap; /* Pastikan teks tidak membungkus */
+}
+
+/* Hover effect */
+.buttons a:hover, .buttons button:hover {
+    text-decoration: none; /* Tetap hilangkan garis bawah saat hover */
+    background-color: #8da9c4d8;
+}
+
+/* Icon styling */
+.buttons i {
+    margin-right: 8px; /* Jarak ikon dengan teks */
+}
+
+/* Footer */
+footer {
+    background-color: #8da9c4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+}

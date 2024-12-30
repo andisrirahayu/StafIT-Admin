@@ -1,0 +1,185 @@
+ /* General CSS */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9e8e8;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    padding-top: 150px; /* Adjusted for submenu spacing */
+}
+
+/* Menu bar (submenu) */
+.menu-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8da9c4;
+    padding: 15px 30px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-bar a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-bar a:hover {
+    background-color: #34495E;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: #7c93a8;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-top: -82px; /* Menambahkan margin-top untuk memberi ruang di bawah submenu */
+    margin-bottom: 120px;
+}
+
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+}
+
+.title {
+    padding-left: 20px;
+    color: rgba(248, 245, 245, 0.959);
+    font-size: 24px;
+}
+
+/* Log Entry */
+.content {
+    margin-top: 20px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.log-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #7c93a8;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.log-title {
+    font-size: 18px;
+    color: white;
+}
+
+.lihat-btn {
+    background-color: white;
+    color: #247BA0;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.lihat-btn:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer */
+footer {
+    background-color: #8da9c4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pastikan elemen disebar merata */
+    margin: 20px auto;
+    width: 80%; /* Lebar seluruh search bar */
+    max-width: 600px; /* Maksimal lebar untuk perangkat besar */
+    background-color: #add8e6; /* Warna biru terang */
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+.search-input {
+    flex: 4; /* Proporsi input lebih besar */
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    color: #333;
+    padding: 5px 10px;
+    font-family: Arial, sans-serif;
+}
+
+.search-input::placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+.search-button {
+    flex: 1; /* Buat tombol menyesuaikan */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333; /* Warna ikon Font Awesome */
+    font-size: 20px; /* Ukuran ikon Font Awesome */
+    text-align: center; /* Ikon di tengah tombol */
+    padding: 5px 0; /* Padding untuk tinggi tombol */
+    background-color: #fff; /* Tambahkan latar belakang tombol jika perlu */
+    border-radius: 25px; /* Tepi tombol sesuai container */
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .search-container {
+        width: 95%; /* Lebar hampir penuh di layar kecil */
+    }
+}
+

@@ -1,0 +1,196 @@
+/* General CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9e8e8;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; /* Pastikan body memiliki tinggi minimal 100vh */
+    padding-top: 150px; /* Adjusted for submenu spacing */
+}
+
+/* Menu bar (submenu) */
+.menu-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8da9c4;
+    padding: 15px 30px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-bar a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-bar a:hover {
+    background-color: #34495E;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: #7c93a8;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-top: -82px; /* Menambahkan margin-top untuk memberi ruang di bawah submenu */
+    margin-bottom: 120px;
+}
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+}
+
+.title {
+    padding-left: 20px;
+    color: rgba(248, 245, 245, 0.959);
+    font-size: 24px;
+}
+
+/* Log Entry */
+.content {
+    margin-top: 20px;
+    width: 80vw; /* Lebar tabel tidak memenuhi layar penuh */
+    max-width: 1200px; /* Membatasi lebar maksimal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.log-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8da9c4;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.log-title {
+    font-size: 18px;
+    color: white;
+}
+
+.lihat-btn {
+    background-color: white;
+    color: #247BA0;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.lihat-btn:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for the table */
+table {
+    width: 80vw; /* Membatasi lebar konten */
+    max-width: 1200px; /* Membatasi lebar maksimal */
+    margin-top: -70px;
+    overflow-y: auto; /* Membuat tabel bisa discroll */
+    max-height: 400px; /* Membatasi tinggi tabel, jika lebih panjang maka bisa scroll */
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ffffff;
+}
+
+table th {
+    background-color: #7c93a8; /* Warna biru untuk header tabel */
+    color: black; /* Teks hitam pada header */
+    font-size: 18px;
+}
+
+table td {
+    background-color: #D9D9D9; /* Warna latar belakang sel tabel */
+    color: black; /* Teks hitam pada sel */
+}
+
+/* Hover effect for table rows */
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form styling inside the table */
+form {
+    display: inline;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #7c93a8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #7c93a8dc;
+}
+
+/* Footer */
+footer {
+    background-color: #8da9c4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative; /* Changed to relative */
+    margin-top: 20px; /* Space above the footer */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .search-container {
+        width: 95%; /* Lebar hampir penuh di layar kecil */
+    }
+}

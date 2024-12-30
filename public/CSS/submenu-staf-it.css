@@ -1,0 +1,92 @@
+/* Menambahkan gaya untuk memastikan seluruh halaman mengisi layar dan footer selalu di bawah */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  /* Membuat body berfungsi sebagai kolom */
+}
+
+.container {
+    text-align: center;
+    background-color: #e9e8e8;
+    padding: 30px;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1; /* Mengizinkan container mengambil ruang yang tersisa, memastikan footer tetap di bawah */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    background-color: #8da9c4;
+    padding: 15px 30px; /* Sesuaikan padding agar lebih proporsional */
+    width: 100vw; /* Lebar penuh layar */
+    position: fixed; /* Tetapkan di bagian atas layar */
+    top: 0; /* Letakkan di bagian paling atas */
+    left: 0; /* Pastikan menempel di kiri layar */
+    right: 0; /* Pastikan menempel di kanan layar */
+    border-radius: 0; /* Hilangkan border-radius untuk sudut tajam */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan jika diinginkan */
+    z-index: 10; /* Pastikan berada di atas elemen lain */
+}
+
+.menu-bar a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent; /* Transparan agar terlihat menyatu */
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-bar a:hover {
+    background-color: #34495E; /* Warna saat hover */
+    color: #fff;
+}
+
+.logo {
+    margin: 20px 0;
+}
+
+.logo img {
+    width: 350px;
+}
+
+.combined-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: rgba(0, 47, 255, 0.527);
+    text-align: center;
+    margin-top: -25px;
+    font-weight: bold;
+}
+
+.combined-title .yellow-text {
+    color: rgba(255, 230, 0, 0.925);
+    font-weight: bold;
+}
+
+/* Footer section */
+footer {
+    background-color: #8da9c4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Pastikan footer mengisi seluruh lebar halaman */
+    margin-top: auto;  /* Memastikan footer berada di bawah konten */
+}
+
+footer p {
+    margin: 5px 0;
+}
